@@ -30,6 +30,8 @@ echo "USAGE :
     -c, --create : creation version
 
     -u, --use : utilisation of version
+
+    -r, --checkout : utilisation of version : utilisation of version
    
 "
 }
@@ -48,6 +50,9 @@ case $@ in
 	;;    
   -u|--use)
 	  use
+	;;   
+  -r|--checkout)
+	  checkout
 	;;        
       
 	*)
@@ -75,6 +80,12 @@ git commit -m "Add raw data ${USER_SCRIPT} "
 git push
 dvc push
 
+}
+
+checkout(){
+
+git checkout HEAD^1
+dvc checkout
 }
 ## Execute #########################################################################################
 
