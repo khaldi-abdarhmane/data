@@ -74,8 +74,8 @@ dvc pull data
 }
 ##################################################################################################################
 create(){
-dvc add data
-git add data.dvc .gitignore
+dvc add PlantVillage
+git add PlantVillage.dvc .gitignore
 git commit -m "Add raw data ${USER_SCRIPT} "
 git push
 dvc push
